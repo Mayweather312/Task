@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id "io.qameta.allure" version "2.11.2"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    testImplementation 'io.rest-assured:rest-assured:5.4.0'
+    testImplementation 'io.qameta.allure:allure-junit5:2.24.0'
+    testImplementation 'io.qameta.allure:allure-commandline:2.24.0'
+    testImplementation 'io.qameta.allure:allure-assertj:2.24.0'
+    testImplementation 'io.qameta.allure:allure-rest-assured:2.24.0'
+    testImplementation 'io.qameta.allure:allure-java-commons:2.24.0'
+    testImplementation 'org.aspectj:aspectjweaver:1.9.19'
+    testImplementation 'org.assertj:assertj-core:3.25.3'
+}
+
+test {
+    useJUnitPlatform()
+}
